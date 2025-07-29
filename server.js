@@ -34,24 +34,24 @@ app.post('/api/send-email', async (req, res) => {
     to: 'ashron@email.com', // Ronit's email
     subject: `New Contact Form Submission from ${name}`,
     html: `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #9EC5AB; color: #011502;">
-        <div style="background-color: #011502; color: #9EC5AB; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #FFFFFA; color: #000103;">
+        <div style="background-color: #000103; color: #FFFFFA; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
           <h2 style="margin: 0; text-align: center;">New Contact Form Submission</h2>
         </div>
         
-        <div style="background-color: #104F55; color: #9EC5AB; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
-          <h3 style="margin: 0 0 10px 0; color: #32746D;">Contact Information</h3>
+        <div style="background-color: #333138; color: #FFFFFA; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+          <h3 style="margin: 0 0 10px 0; color: #FF312E;">Contact Information</h3>
           <p style="margin: 5px 0;"><strong>Name:</strong> ${name}</p>
           <p style="margin: 5px 0;"><strong>Email:</strong> ${email}</p>
         </div>
         
-        <div style="background-color: #01200F; color: #9EC5AB; padding: 20px; border-radius: 10px;">
-          <h3 style="margin: 0 0 15px 0; color: #32746D;">Message</h3>
+        <div style="background-color: #515052; color: #FFFFFA; padding: 20px; border-radius: 10px;">
+          <h3 style="margin: 0 0 15px 0; color: #FF312E;">Message</h3>
           <p style="line-height: 1.6; margin: 0;">${message}</p>
         </div>
         
-        <div style="text-align: center; margin-top: 20px; padding: 15px; background-color: #32746D; border-radius: 10px;">
-          <p style="margin: 0; color: #9EC5AB; font-size: 14px;">
+        <div style="text-align: center; margin-top: 20px; padding: 15px; background-color: #FF312E; border-radius: 10px;">
+          <p style="margin: 0; color: #FFFFFA; font-size: 14px;">
             This email was sent from your portfolio contact form.
           </p>
         </div>

@@ -24,27 +24,27 @@ const qualifications = [
 
 const Qualification = () => {
   return (
-    <section className="min-h-screen w-full bg-[#01200F] text-[#9EC5AB] px-6 md:px-16 py-20 flex flex-col items-center">
+    <section className="min-h-screen w-full bg-[#333138] text-[#FFFFFA] px-6 md:px-16 py-20 flex flex-col items-center">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-bold uppercase relative inline-block mb-2">
           Qualification
-          <span className="block w-16 h-1 bg-gradient-to-r from-[#32746D] to-[#104F55] mx-auto mt-2 rounded" />
+          <span className="block w-16 h-1 bg-gradient-to-r from-[#FF312E] to-[#515052] mx-auto mt-2 rounded" />
         </h2>
-        <p className="text-lg text-[#9EC5AB]/80">My Academic & Professional Journey</p>
+        <p className="text-lg text-[#FFFFFA]/80">My Academic & Professional Journey</p>
       </div>
 
       <div className="flex flex-col gap-10 w-full max-w-3xl">
         {qualifications.map((item, idx) => (
           <div
             key={idx}
-            className="relative border-l-4 border-[#32746D] pl-6 py-6 bg-[#104F55]/30 rounded-lg shadow-lg backdrop-blur-md hover:shadow-[#32746D]/20 hover:bg-[#104F55]/50 transition-all duration-300"
+            className="relative border-l-4 border-[#FF312E] pl-6 py-6 bg-[#515052]/30 rounded-lg shadow-lg backdrop-blur-md hover:shadow-[#FF312E]/20 hover:bg-[#515052]/50 transition-all duration-300"
           >
-            <div className="absolute -left-4 top-6 bg-[#32746D] p-2 rounded-full shadow-lg">
+            <div className="absolute -left-4 top-6 bg-[#FF312E] p-2 rounded-full shadow-lg">
               {item.icon}
             </div>
-            <h3 className="text-xl font-semibold mb-1 text-[#9EC5AB]">{item.title}</h3>
-            <p className="text-[#9EC5AB]/80">{item.place}</p>
-            <p className="text-sm text-[#9EC5AB]/60 italic">{item.date}</p>
+            <h3 className="text-xl font-semibold mb-1 text-[#FFFFFA]">{item.title}</h3>
+            <p className="text-[#FFFFFA]/80">{item.place}</p>
+            <p className="text-sm text-[#FFFFFA]/60 italic">{item.date}</p>
           </div>
         ))}
       </div>

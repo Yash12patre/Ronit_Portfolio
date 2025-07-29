@@ -17,10 +17,10 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="bg-[#01200F] text-[#9EC5AB] justify-center w-full min-h-[calc(100vh-64px)] p-6 md:p-16 flex flex-col gap-10">
+    <section id="skills" className="bg-[#333138] text-[#FFFFFA] justify-center w-full min-h-[calc(100vh-64px)] p-6 md:p-16 flex flex-col gap-10">
       <div className="text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-2">My Skills</h2>
-        <p className="text-[#9EC5AB]/80 max-w-xl mx-auto text-2xl">
+        <p className="text-[#FFFFFA]/80 max-w-xl mx-auto text-2xl">
           Here are some of the skills I bring to the table in frontend and backend development.
         </p>
       </div>
@@ -29,7 +29,7 @@ const Skills = () => {
         {skills.map((skill, idx) => (
           <div
             key={idx}
-            className="bg-[#104F55] rounded-xl p-5 shadow-lg hover:shadow-xl hover:bg-[#32746D] transition-all duration-300 border border-[#32746D]/30"
+            className="bg-[#515052] rounded-xl p-5 shadow-lg hover:shadow-xl hover:bg-[#FF312E] transition-all duration-300 border border-[#515052]/30"
           >
             <div className="flex items-start justify-center gap-4">
               {skill.icon}
@@ -38,10 +38,10 @@ const Skills = () => {
               </div>
             </div>
 
-            <div className="mt-4 grid grid-cols-2 gap-y-2 text-[#9EC5AB]">
+            <div className="mt-4 grid grid-cols-2 gap-y-2 text-[#FFFFFA]">
               {skill.tools.map((tool, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#9EC5AB] rounded-full" />
+                  <span className="w-2 h-2 bg-[#FFFFFA] rounded-full" />
                   {tool}
                 </div>
               ))}
