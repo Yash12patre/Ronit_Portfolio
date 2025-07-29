@@ -38,7 +38,7 @@ const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("Logo");
 
   return (
-    <section className="min-h-screen w-full bg-green-950 text-white px-6 md:px-16 py-20 flex flex-col items-center">
+    <section className="min-h-screen w-full bg-[#011502] text-[#9EC5AB] px-6 md:px-16 py-20 flex flex-col items-center">
       <div className="text-center mb-10">
         <h2 className="text-4xl md:text-5xl font-bold uppercase mb-2">Portfolio</h2>
         <p className="text-2xl md:text-3xl font-semibold mb-6">Recently I Made</p>
@@ -48,9 +48,9 @@ const Portfolio = () => {
               key={category}
               className={`px-4 py-2 rounded-full border ${
                 selectedCategory === category
-                  ? "bg-green-500 text-white"
-                  : "border-green-500 text-green-400"
-              } transition duration-300 hover:bg-green-400 hover:text-black`}
+                  ? "bg-[#32746D] text-[#9EC5AB] border-[#32746D]"
+                  : "border-[#32746D] text-[#32746D]"
+              } transition duration-300 hover:bg-[#32746D] hover:text-[#9EC5AB]`}
               onClick={() => setSelectedCategory(category)}
             >
               {category}
@@ -63,20 +63,20 @@ const Portfolio = () => {
         {portfolioData[selectedCategory].map((item, idx) => (
           <div
             key={idx}
-            className="bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-md hover:shadow-green-500/20 transition border border-green-500"
+            className="bg-[#01200F]/50 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-[#32746D]/20 transition-all duration-300 border border-[#32746D]/30 hover:border-[#32746D]"
           >
             <img
               src={`https://source.unsplash.com/500x300/?design,${selectedCategory},${idx}`}
               alt={item.title}
-              className="rounded-lg mb-4"
+              className="rounded-lg mb-4 hover:scale-105 transition-transform duration-300"
             />
-            <h3 className="text-xl font-semibold mb-2 text-green-200">{item.title}</h3>
-            <p className="text-sm text-gray-300 mb-4">View a live preview of this work</p>
+            <h3 className="text-xl font-semibold mb-2 text-[#9EC5AB]">{item.title}</h3>
+            <p className="text-sm text-[#9EC5AB]/80 mb-4">View a live preview of this work</p>
             <a
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-500 text-black px-4 py-2 rounded-full font-medium hover:bg-green-400 transition"
+              className="inline-flex items-center gap-2 bg-[#32746D] text-[#9EC5AB] px-4 py-2 rounded-full font-medium hover:bg-[#104F55] transition-all duration-300 shadow-lg"
             >
               Show Demo <ExternalLink size={16} />
             </a>

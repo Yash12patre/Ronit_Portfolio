@@ -59,21 +59,21 @@ const Testimonial = () => {
   });
 
   return (
-    <div className="bg-gray-900 text-white py-16 px-4 md:px-12 relative">
+    <div className="bg-[#01200F] text-[#9EC5AB] py-16 px-4 md:px-12 relative">
       <h1 className="text-4xl font-bold text-center mb-2">Testimonials</h1>
-      <p className="text-center text-gray-300 mb-10">My clients are saying</p>
+      <p className="text-center text-[#9EC5AB]/80 mb-10">My clients are saying</p>
 
       <div className="relative">
         {/* Arrows */}
         <button
           onClick={() => instanceRef.current?.prev()}
-          className="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 z-10 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full shadow-md"
+          className="absolute left-[-2rem] top-1/2 transform -translate-y-1/2 z-10 bg-[#32746D] hover:bg-[#104F55] text-[#9EC5AB] p-2 rounded-full shadow-lg transition-all duration-300"
         >
           <ChevronLeft />
         </button>
         <button
           onClick={() => instanceRef.current?.next()}
-          className="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 z-10 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full shadow-md"
+          className="absolute right-[-2rem] top-1/2 transform -translate-y-1/2 z-10 bg-[#32746D] hover:bg-[#104F55] text-[#9EC5AB] p-2 rounded-full shadow-lg transition-all duration-300"
         >
           <ChevronRight />
         </button>
@@ -83,16 +83,16 @@ const Testimonial = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="keen-slider__slide bg-gray-800 rounded-xl p-6 shadow-md flex flex-col items-center text-center"
+              className="keen-slider__slide bg-[#104F55] rounded-xl p-6 shadow-lg hover:shadow-xl flex flex-col items-center text-center border border-[#32746D]/30 hover:border-[#32746D] transition-all duration-300"
             >
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-20 h-20 rounded-full mb-4 border-2 border-white"
+                className="w-20 h-20 rounded-full mb-4 border-2 border-[#32746D] shadow-lg"
               />
               <p className="text-lg mb-4 italic">"{testimonial.text}"</p>
-              <h3 className="font-bold text-white">{testimonial.name}</h3>
-              <p className="text-gray-400">{testimonial.designation}</p>
+              <h3 className="font-bold text-[#9EC5AB]">{testimonial.name}</h3>
+              <p className="text-[#9EC5AB]/70">{testimonial.designation}</p>
             </div>
           ))}
         </div>
